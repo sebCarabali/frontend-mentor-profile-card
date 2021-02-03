@@ -1,0 +1,88 @@
+@import "variables";
+@import "mediaquery";
+@import "globals";
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: calc(100% - 1.5rem);
+  border-radius: 8px;
+}
+
+.card {
+  &__header {
+    min-height: 138px;
+    background: url("../../images/bg-pattern-card.svg");
+    background-size: cover;
+    background-position: center center;
+    border-radius: 8px 8px 0 0;
+    position: relative;
+
+    > img {
+      width: 94px;
+      border-radius: 50%;
+      border: 4px solid white;
+      position: absolute;
+      bottom: -50%;
+      left: 50%;
+      transform: translate(-50%, -25%);
+    }
+  }
+
+  &__body {
+    margin-top: 4.5rem;
+    margin-bottom: 1.6875rem;
+    line-height: 0.8;
+    .info {
+      text-align: center;
+      &__name {
+        color: $veryDarkDesaturatedBlue;
+        font-size: 1.125rem;
+        font-weight: 700;
+      }
+
+      &__age {
+        color: $darkGray;
+        font-weight: 400;
+        margin-left: 0.3rem;
+        font-size: 1rem;
+      }
+
+      &__city {
+        color: $darkGray;
+      }
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid $lightGray;
+    .stats {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      padding: 1.5rem 0;
+
+      .stat {
+        > span {
+          display: block;
+          text-align: center;
+        }
+
+        &__number {
+          font-size: 1.125rem;
+          font-weight: 700;
+          color: $veryDarkDesaturatedBlue;
+        }
+
+        &__topic {
+          color: $darkGray;
+          font-weight: 400;
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }
+}
